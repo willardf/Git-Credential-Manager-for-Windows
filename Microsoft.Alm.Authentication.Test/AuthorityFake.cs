@@ -25,7 +25,7 @@ namespace Microsoft.Alm.Authentication.Test
             return await Task.Run(() => { return new Token("token-access", TokenType.Access); });
         }
 
-        public async Task<Token> NoninteractiveAcquireToken(TargetUri targetUri, string clientId, string resource, Uri redirectUri, string queryParameters = null)
+        public async Task<Token> NoninteractiveAcquireToken(TargetUri targetUri, string clientId, string resource, Uri redirectUri)
         {
             Assert.AreEqual(this.ExpectedQueryParameters, queryParameters);
 
